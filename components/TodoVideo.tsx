@@ -7,7 +7,6 @@ import { startVideo } from "@/actions/video";
 export function TodoVideo(props: any) {
   let { video, updateList } = props;
   const start = async (id: string) => {
-    console.log(id);
     await startVideo(id);
     updateList(id);
     toast.success("开始追了!");
@@ -20,6 +19,7 @@ export function TodoVideo(props: any) {
       </div>
       <div>
         <h2 className="text-ellipsis">{video.title}</h2>
+        <div>共：{video.total} P</div>
         <label
           htmlFor={`confirm-modal-${video.id}`}
           className="btn btn-primary btn-sm absolute bottom-0"

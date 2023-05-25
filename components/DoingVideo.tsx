@@ -28,7 +28,8 @@ export function DoingVideo(props: any) {
       </div>
       <div>
         <h2 className="text-ellipsis">{video.title}</h2>
-        <p>进度：{video.current + "/" + video.total}</p>
+        <div>当前在看：{video.current} P</div>
+        <div>共：{video.total} P</div>
         {video.current === video.total ? (
           <button
             className="btn btn-primary btn-sm absolute bottom-0"
